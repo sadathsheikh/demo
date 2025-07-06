@@ -3,16 +3,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('demo') {
+                dir('demo/demo') {
                     sh 'mvn clean package'
                 }
             }
         }
         stage('Deploy') {
             steps {
-                dir('demo') {
+                dir('demo/demo') {
                     echo 'Deploy stage here - add your deploy commands'
-                    // Example: copy WAR file to Tomcat
+                    // Example:
                     // sh 'cp target/*.war /home/ubuntu/tomcat/webapps/demo.war'
                 }
             }
