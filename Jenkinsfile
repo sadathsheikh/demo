@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('demo/demo') {
+                dir('demo') {
                     sh 'mvn clean package'
                 }
             }
